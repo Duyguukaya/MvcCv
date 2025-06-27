@@ -1,0 +1,46 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblYeteneklerim>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Yeteneklerim</h2>
+    <div class="subheading mb-3">Programlama Dilleri & Araçlar</div>
+    <ul class="list-inline dev-icons">
+      
+            <!-- Frontend Teknolojileri -->
+            <li class="list-inline-item"><i class="fab fa-html5 fa-2x text-danger" title="HTML5"></i></li>
+            <li class="list-inline-item"><i class="fab fa-css3-alt fa-2x text-primary" title="CSS3"></i></li>
+            <li class="list-inline-item"><i class="fab fa-js-square fa-2x text-warning" title="JavaScript"></i></li>
+            <li class="list-inline-item"><i class="fab fa-bootstrap fa-2x text-purple" title="Bootstrap"></i></li>
+
+            <!-- Backend Dilleri -->
+            <li class="list-inline-item"><span class="badge bg-danger" title="C">C</span></li>
+            <li class="list-inline-item"><span class="badge bg-dark" title="C#">C#</span></li>
+            <li class="list-inline-item"><span class="badge bg-danger" title="Ruby">Ruby</span></li>
+
+            <!-- Veritabanı -->
+            <li class="list-inline-item"><span class="badge bg-info text-dark" title="SQL">SQL</span></li>
+            <li class="list-inline-item"><span class="badge bg-warning text-dark" title="MySQL">MySQL</span></li>
+            <li class="list-inline-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" width="30" title="SQLite"></li>
+
+            <!-- Mobil Geliştirme -->
+            <li class="list-inline-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="30" title="Flutter"></li>
+            <li class="list-inline-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" width="30" title="Dart"></li>
+
+            <!-- Araçlar ve Diğer Teknolojiler -->
+            <li class="list-inline-item"><i class="fab fa-git-alt fa-2x text-danger" title="Git"></i></li>
+            <li class="list-inline-item"><i class="fab fa-github fa-2x" title="GitHub"></i></li>
+            <li class="list-inline-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" width="30" alt="Visual Studio" title="Visual Studio"></li>
+            <li class="list-inline-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="30" alt="VS Code" title="VS Code"></li>
+        </ul>
+    <div class="subheading mb-3">Becerilerim</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+        <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            @x.Yetenek
+        </li>
+        }
+
+    </ul>
+</div>
